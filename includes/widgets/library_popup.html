@@ -1,0 +1,62 @@
+
+<style>
+#dialogoverlay{
+	display: none;
+	opacity: .8;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background: #FFF;
+	width: 100%;
+	z-index: 10000;
+}
+#dialogbox{
+	display: none;
+	position: fixed;
+	background: #E59400;
+	border-radius:7px; 
+	width:750px;
+	z-index: 100000;
+	font-size:18px;
+}
+#dialogbox > div{ background:#FFF; margin:8px; }
+#dialogbox > div > #dialogboxhead{ background: #009E4C; font-size:25px; padding:30px; color:#FFF; }
+#dialogbox > div > #dialogboxbody{ background:#00CC66; padding:20px; color:#FFF; }
+#dialogbox > div > #dialogboxfoot{ background: #009E4C; padding:15px; text-align:right; }
+<!----------------------------------->
+
+</style>
+<script>
+function CustomAlert(){
+    this.render = function(dialog){
+        var winW = window.innerWidth;
+        var winH = window.innerHeight;
+        var dialogoverlay = document.getElementById('dialogoverlay');
+        var dialogbox = document.getElementById('dialogbox');
+        dialogoverlay.style.display = "block";
+        dialogoverlay.style.height = winH+"px";
+        dialogbox.style.left = (winW/2) - (750 * .5)+"px";
+        dialogbox.style.top = "100px";
+        dialogbox.style.display = "block";
+		var xyz = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem <span style=\"color:#000\">This is in diffrent color</span>  is that it has a moreIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a moreIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more";
+        document.getElementById('dialogboxhead').innerHTML = "MCA library rules and regulations";
+        document.getElementById('dialogboxbody').innerHTML = xyz;
+        document.getElementById('dialogboxfoot').innerHTML = '<button style="padding:10px 30px;background-color:#007F47;color:#FFF;border-radius:10px;border-color:#E59400;box-shadow:0px 12px 21px 0px rgba(50, 50, 50, 0.81);" onclick="Alert.ok()">OK</button></span>';
+    }
+	this.ok = function(){
+		document.getElementById('dialogbox').style.display = "none";
+		document.getElementById('dialogoverlay').style.display = "none";
+	}
+}
+var Alert = new CustomAlert();
+</script><body onLoad="Alert.render('You look very pretty today.')">
+</head>
+<body>
+<div id="dialogoverlay"></div>
+<div id="dialogbox">
+  <div>
+    <div id="dialogboxhead"></div>
+    <div id="dialogboxbody"></div>
+    <div id="dialogboxfoot"></div>
+  </div>
+</div>

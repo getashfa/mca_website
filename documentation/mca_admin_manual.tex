@@ -1,0 +1,59 @@
+%%%%%%%%%%%%%%%%%%%%%%%%HEADER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper,oneside,12pt]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{amssymb}
+\usepackage{varioref}
+\usepackage[margin=.9in]{geometry}
+\usepackage{url}
+\usepackage{color}   	%May be necessary if you want to color links
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true, 	%set true if you want colored links
+	linktoc=all,     	%set to all if you want both sections and subsections linked
+	linkcolor=blue,  	%choose some color if you want links to stand out
+}
+\usepackage{marvosym}	%for emoticons
+\usepackage{tikz}		%for folder tree
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\title{\huge \bf MCA Website - SysAd Manual}
+\author{\normalsize Ashfaque Ahammed \texttt{<getashfa@gmail.com>}}
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+%%%%%%%%%%%%%%%%%%%%%%%% Introduction %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+	This document describes the overall picture of MCA website. 
+	
+	\subsection{Brief History}
+	\paragraph{}MCA holds a huge collection of Malayalam movies for many years. They had stood up a \texttt{ftp} server and everything was fine. One day I was searching for an old Mohanlal-movie(thouugh I'm not a fan \Smiley{}), I couldn't find it out, even it was actually there. Yes, it was not that well organized. So the \Lightning idea come from the fact that to bring something better to navigate(of-course movies). I was just a newbie to web-development other that those simple \texttt{html} only pages made on school days. I started coding this project back in 2015 January and it took me more than two months to reach a point that it can be launched, as I was doing it on my free time. MCA council gave me all the support on this especially \textit{Sharan, Ashwin, Ramzan, Jayasankar}. Website initially launched on March 15, 20015 while people and library tabs left to code.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Website Directory Structure}
+	\usetikzlibrary{trees}
+	\tikzstyle{every node}=[draw=black,thick,anchor=west]
+	\tikzstyle{selected}=[draw=red,fill=red!30]
+	\tikzstyle{optional}=[dashed,fill=gray!50]
+	\begin{tikzpicture}[%
+	grow via three points={one child at (0.5,-0.7) and
+		two children at (0.5,-0.7) and (0.5,-1.4)},
+	edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}]
+	\node {texmf}
+	child { node {doc}}		
+	child { node {fonts}}
+	child { node {source}}
+	child { node [selected] {tex}
+		child { node {generic}}
+		child { node [optional] {latex}}
+		child { node {plain}}
+	}
+	child [missing] {}				
+	child [missing] {}				
+	child [missing] {}				
+	child { node {texdoc}};
+	\end{tikzpicture}	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

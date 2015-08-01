@@ -1,0 +1,76 @@
+
+#homeButton {
+	padding:10px;
+	width:170px;
+	height:40px;
+	border:1px solid #666;
+	border-radius:3px;
+}
+#reg-success {
+	margin:35px;
+	padding:25px;
+	background-color:#899700;
+	color:fff;
+	border:2px solid #666;
+	border-radius:4px
+	-webkit-box-shadow: 11px 10px 86px 5px rgba(0,0,0,0.75);
+	-moz-box-shadow: 11px 10px 86px 5px rgba(0,0,0,0.75);
+	box-shadow: 11px 10px 86px 5px rgba(0,0,0,0.75);
+}
+#reg-form {
+	margin-top:15px;
+	padding:60px;
+	color:#FFF;
+	background: -webkit-linear-gradient(#999, #00CC66);
+  	background: -o-linear-gradient(#999, #00CC66);
+	background: -moz-linear-gradient(#999, #00CC66);
+	background: linear-gradient(#999, #00CC66); 
+	border:1px solid #CCCCCC;
+	overflow:auto;
+}
+
+#reg-form ul li select {
+	width:265px;
+	border-radius:3px;
+	padding:5px;
+}
+#changepass ul li, #reg-form ul li {
+	list-style:none;
+	margin:8px;	
+}
+
+#changepass input[type="submit"], #reg-form ul li input[type="submit"] {
+	border:1px solid #666;
+	border-radius:3px;
+	background-color:#fff;
+	padding:6px 8px;
+	vertical-align:bottom;
+	margin-left:4px;
+}
+#changepass input[type="text"], #reg-form ul li input[type="text"] {
+	width:250px;
+	background-color:#fff;
+	padding:6px 6px;
+	border:1px solid #666;
+	border-radius:3px;
+}
+#changepass input[type="password"], #reg-form input[type="password"] {
+	width:250px;
+	background-color:#fff;
+	padding:4px 6px;
+	border:1px solid #666;
+	border-radius:3px;
+}
+#reg-form input[type="file"] {
+	margin-top:8px;
+	padding:4px 4px;
+}
+.profpic {
+	width:200px;
+	float:right;
+	padding:10px;
+}
+.profpic img {
+	width:100%;
+	border:4px solid green;
+}

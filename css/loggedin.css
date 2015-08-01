@@ -1,0 +1,59 @@
+/* CSS Document */
+/* This styles the logged in navigation menu */
+#nav-menu {
+	margin:0px;
+	padding:0px;
+	float:right;
+	margin:33px 35px 0px 0px;
+}
+#nav-menu ul {
+	margin:0;
+	padding:0;
+	line-height:38px;
+}
+#nav-menu li {
+	margin:0;
+	padding:0;
+	list-style:none;
+	float:left;
+	position:relative;
+	background-color:#777;
+	z-index:9999;
+}
+#nav-menu ul li a {
+	text-align:center;
+	text-decoration:none;
+	height:38px;
+	width:200px;
+	display:block;
+	color:#FFF;
+	border:1px solid #777;
+}
+#nav-menu ul li a img {
+	border-radius:7px;
+}
+#nav-menu ul ul {
+	position:absolute;
+	visibility:hidden;
+	top:40px;
+}
+#nav-menu ul li:hover ul {
+	visibility:visible;
+}
+/******************************************************/
+
+#nav-menu li:hover {
+	background-color:#00CC66;
+	
+}
+#nav-menu ul li:hover ul li a:hover {
+	background-color:#009900;
+	color:#fff;
+}
+
+
+.clear-float {
+	clear:both;
+	margin:0px;
+	padding:0px;
+}
