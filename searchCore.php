@@ -1,7 +1,7 @@
 <?php
 // codes for searching ---------
 
-$db = new MySQLi('localhost','root','straifo','mca');
+$db = new MySQLi('localhost','root','xxxx','xxxx');
 if(isset($_GET['keywords'])) {
 	$keywords = $db->escape_string($_GET['keywords']);
 	
