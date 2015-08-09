@@ -6,7 +6,7 @@ function movie_exists($movie_name) {
 }
 
 function retrive_movies_all() {
-	$db_conx = mysqli_connect("localhost", "root", "straifo", "mca");
+	$db_conx = mysqli_connect("localhost", "username", "password", "db");
 	$sql = "SELECT COUNT(movie_id) FROM movie";
 	$query = mysqli_query($db_conx, $sql);
 	$row = mysqli_fetch_row($query);
